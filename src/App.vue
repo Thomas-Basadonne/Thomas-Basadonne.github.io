@@ -64,7 +64,7 @@ const NextQuestion = () =>{
   if(currentQuestion.value < questions.value.length - 1){
     currentQuestion.value++
   }else{
-    quizCompleted = true
+    quizCompleted.value = true
   }
 }
 </script>
@@ -73,7 +73,8 @@ const NextQuestion = () =>{
   <main class="app">
     <h1>Il quiz</h1>
     <h2>Vinci un frutto del diavolo!</h2>
-    <section class="quiz">
+
+    <section class="quiz" v-if="!quizCompleted">
       <div class="quiz-info">
         <span class="question">
           {{ getCurrentQuestion.question }}
@@ -110,6 +111,21 @@ const NextQuestion = () =>{
             <span>{{ option }}</span>
         </label>
       </div>
+      <button
+      @click="NextQuestion"
+      :disabled="!getCurrentQuestion.selected">
+      {{ 
+        getCurrentQuestion.index == questions.length -1
+          ? 'Finito'
+          : getCurrentQuestion.selected == null
+            ? 'Scegli una opzione'
+            : 'Prossima domanda'
+      }}
+      </button>
+    </section>
+    <section v-else>
+      <h2>Hai finito il quiz!</h2>
+      <p>il tuo punteggio è {{ score }} / {{ questions.length }}</p>
     </section>
   </main>
 </template>
