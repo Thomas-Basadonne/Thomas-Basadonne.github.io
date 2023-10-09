@@ -38,7 +38,35 @@ const questions = ref([
 ])
 
 const quizCompleted = ref(false)
+const currentQuestion = ref(0)
+const score = computed(()=>{
+  let value = 0
+  questions.value.map(q=>{
+    if(q.selected == q.answer){
+      value++
+    }
+  })
+  return value
+})
 
+const getCurrentQuestion = computed(() =>{
+  let question = questions.value[currentQuestion.value]
+  question.index = currentQuestion.value
+  return question
+})
+
+const SetAnswer = evt =>{
+  questions.value[currentQuestion.value].selected = evt.target.value
+  evt.target.value = null
+}
+
+const NextQuestion = () =>{
+  if(currentQuestion.value < questions.value.length - 1){
+    currentQuestion.value++
+  }else{
+    quizCompleted = true
+  }
+}
 </script>
 
 <template>
