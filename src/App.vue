@@ -70,7 +70,48 @@ const NextQuestion = () =>{
 </script>
 
 <template>
-  <h1>hello</h1>
+  <main class="app">
+    <h1>Il quiz</h1>
+    <h2>Vinci un frutto del diavolo!</h2>
+    <section class="quiz">
+      <div class="quiz-info">
+        <span class="question">
+          {{ getCurrentQuestion.question }}
+        </span>
+        <span class="score">
+          Punteggio {{ score }} / {{ questions.length }}
+        </span>
+      </div>
+
+      <div class="quiz-options">
+        <label 
+        v-for="(option, index) in getCurrentQuestion.options" 
+        :key="index"
+        :class="`option ${getCurrentQuestion.selected == index 
+                          ? index == getCurrentQuestion.answer 
+                          ? 'correct' 
+                          : 'wrong' 
+                          :''
+                          }
+                          ${
+                          getCurrentQuestion.selected != null &&
+                          index != getCurrentQuestion.selected
+                          ? 'disabled'
+                          :''
+                          }`
+                        ">
+          <input 
+            type="radio" 
+            :name="getCurrentQuestion.index"
+            :value="index"
+            v-model="getCurrentQuestion.selected"
+            :disabled="getCurrentQuestion.selected"
+            @change="SetAnswer">
+            <span>{{ option }}</span>
+        </label>
+      </div>
+    </section>
+  </main>
 </template>
 
 <style>
