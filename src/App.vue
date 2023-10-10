@@ -1,44 +1,35 @@
 <script setup>
-import {ref, computed} from 'vue'
+import { ref, computed } from 'vue';
 
+// Definisci le domande del quiz
 const questions = ref([
   {
     question: 'Chi è il capitano della ciurma?',
     answer: 1,
-    options:[
-      'Zoro',
-      'Luffy',
-      'Ussop',
-      'Sanji'
-    ],
-    selected: null
+    options: ['Zoro', 'Luffy', 'Ussop', 'Sanji'],
+    selected: null,
   },
   {
     question: 'Chi ha tre spade?',
     answer: 0,
-    options:[
-      'Zoro',
-      'Luffy',
-      'Ussop',
-      'Sanji'
-    ],
-    selected: null
+    options: ['Zoro', 'Luffy', 'Ussop', 'Sanji'],
+    selected: null,
   },
   {
     question: 'Chi è il più fifone?',
     answer: 2,
-    options:[
-      'Zoro',
-      'Luffy',
-      'Ussop',
-      'Sanji'
-    ],
-    selected: null
-  }
-])
+    options: ['Zoro', 'Luffy', 'Ussop', 'Sanji'],
+    selected: null,
+  },
+]);
 
-const quizCompleted = ref(false)
-const currentQuestion = ref(0)
+// Variabile per tracciare il completamento del quiz
+const quizCompleted = ref(false);
+
+// Variabile per tracciare la domanda corrente
+const currentQuestion = ref(0);
+
+// Calcola il punteggio del quiz
 const score = computed(()=>{
   let value = 0
   questions.value.map(q=>{
@@ -49,24 +40,27 @@ const score = computed(()=>{
   return value
 })
 
-const getCurrentQuestion = computed(() =>{
-  let question = questions.value[currentQuestion.value]
-  question.index = currentQuestion.value
-  return question
-})
+// Ottieni la domanda corrente
+const getCurrentQuestion = computed(() => {
+  let question = questions.value[currentQuestion.value];
+  question.index = currentQuestion.value;
+  return question;
+});
 
-const SetAnswer = evt =>{
-  questions.value[currentQuestion.value].selected = evt.target.value
-  evt.target.value = null
-}
+// Imposta la risposta selezionata per la domanda corrente
+const SetAnswer = (evt) => {
+  questions.value[currentQuestion.value].selected = evt.target.value;
+  evt.target.value = null;
+};
 
-const NextQuestion = () =>{
-  if(currentQuestion.value < questions.value.length - 1){
-    currentQuestion.value++
-  }else{
-    quizCompleted.value = true
+// Passa alla prossima domanda o completa il quiz se tutte le domande sono state risposte
+const NextQuestion = () => {
+  if (currentQuestion.value < questions.value.length - 1) {
+    currentQuestion.value++;
+  } else {
+    quizCompleted.value = true;
   }
-}
+};
 </script>
 
 <template>
@@ -74,21 +68,19 @@ const NextQuestion = () =>{
     <h1>Il quiz</h1>
     <h2>Vinci un frutto del diavolo!</h2>
 
+    <!-- Se il quiz non è completato, visualizza la domanda corrente -->
     <section class="quiz" v-if="!quizCompleted">
       <div class="quiz-info">
-        <span class="question">
-          {{ getCurrentQuestion.question }}
-        </span>
-        <span class="score">
-          Punteggio {{ score }} / {{ questions.length }}
-        </span>
+        <span class="question">{{ getCurrentQuestion.question }}</span>
+        <span class="score">Punteggio {{ score }} / {{ questions.length }}</span>
       </div>
 
       <div class="options">
-        <label 
-        v-for="(option, index) in getCurrentQuestion.options" 
-        :key="index"
-        :class="`option ${getCurrentQuestion.selected == index 
+        <!-- Itera tra le opzioni possibili -->
+        <label
+          v-for="(option, index) in getCurrentQuestion.options"
+          :key="index"
+          :class="`option ${getCurrentQuestion.selected == index 
                           ? index == getCurrentQuestion.answer 
                           ? 'correct' 
                           : 'wrong' 
@@ -100,35 +92,41 @@ const NextQuestion = () =>{
                           ? 'disabled'
                           :''
                           }`
-                        ">
-          <input 
-            type="radio" 
+                        "
+        >
+          <!-- Input radio per la selezione dell'opzione -->
+          <input
+            type="radio"
             :name="getCurrentQuestion.index"
             :value="index"
             v-model="getCurrentQuestion.selected"
-            :disabled="getCurrentQuestion.selected"
-            @change="SetAnswer">
-            <span>{{ option }}</span>
+            :disabled="getCurrentQuestion.selected !== null"
+            @change="SetAnswer"
+          />
+          <span>{{ option }}</span>
         </label>
       </div>
-      <button
-      @click="NextQuestion"
-      :disabled="!getCurrentQuestion.selected">
-      {{ 
-        getCurrentQuestion.index == questions.length -1
-          ? 'Finito'
-          : getCurrentQuestion.selected == null
+      <!-- Bottone per passare alla prossima domanda -->
+      <button @click="NextQuestion" :disabled="!getCurrentQuestion.selected">
+        {{
+          getCurrentQuestion.index === questions.length - 1
+            ? 'Finito'
+            : getCurrentQuestion.selected === null
             ? 'Scegli una opzione'
             : 'Prossima domanda'
-      }}
+        }}
       </button>
     </section>
+
+    <!-- Se il quiz è completato, mostra il punteggio finale -->
     <section v-else>
       <h2>Hai finito il quiz!</h2>
       <p>il tuo punteggio è {{ score }} / {{ questions.length }}</p>
     </section>
   </main>
 </template>
+
+
 
 <style>
 * {
