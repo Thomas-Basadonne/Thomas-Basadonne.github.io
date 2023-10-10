@@ -1,0 +1,138 @@
+// Variabili
+$font-family: 'Montserrat', sans-serif;
+$primary-bg-color: #271c36;
+$white-color: #FFF;
+$quiz-bg-color: #382a4b;
+$quiz-option-bg: #271c36;
+$quiz-option-hover-bg: #2d213f;
+$correct-option-bg: #2cce7d;
+$wrong-option-bg: #ff5a5f;
+$disabled-option-opacity: 0.5;
+$button-bg-color: #2cce7d;
+$button-text-color: #2d213f;
+
+// Mixin per la selezione dell'opzione
+@mixin option($bg-color) {
+  padding: 1rem;
+  display: block;
+  background-color: $bg-color;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  &:hover {
+    background-color: $quiz-option-hover-bg;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  &.correct {
+    background-color: $correct-option-bg;
+  }
+  &.wrong {
+    background-color: $wrong-option-bg;
+  }
+  &.disabled {
+    opacity: $disabled-option-opacity;
+  }
+  input {
+    display: none;
+  }
+}
+
+// Stili SCSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+body {
+  background-color: $primary-bg-color;
+  color: $white-color;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: $button-text-color; 
+  }
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.quiz {
+  background-color: $quiz-bg-color;
+  padding: 1rem;
+  width: 100%;
+  max-width: 640px;
+}
+
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  .question {
+    color: #8F8F8F;
+    font-size: 1.25rem;
+  }
+  .score {
+    color: $white-color;
+    font-size: 1.25rem;
+  }
+}
+
+.option {
+  @include option($quiz-option-bg);
+}
+
+.option.correct {
+  @include option($correct-option-bg);
+}
+
+.option.wrong {
+  @include option($wrong-option-bg);
+}
+
+.option.disabled {
+  @include option($disabled-option-opacity);
+}
+
+button, .my-router-link {
+  appearance: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: $button-bg-color;
+  color: $button-text-color;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  &:disabled {
+    opacity: $disabled-option-opacity;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+p {
+  color: #8F8F8F;
+  font-size: 1.5rem;
+  text-align: center;
+}
