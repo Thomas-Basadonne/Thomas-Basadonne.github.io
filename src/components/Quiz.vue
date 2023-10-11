@@ -1,7 +1,7 @@
 <script setup>
-import { ref, computed, defineProps } from 'vue';
+import { ref, computed, defineProps } from "vue";
 
-const { questions: initialQuestions } = defineProps(['questions']);
+const { questions: initialQuestions } = defineProps(["questions"]);
 
 const questions = ref(initialQuestions);
 
@@ -15,10 +15,10 @@ const quizCompleted = ref(false);
 const currentQuestion = ref(0);
 
 // Variabile per la durata timer
-const timeLeft = ref(10); 
+const timeLeft = ref(10);
 
 // Variabile per il timer
-let timer; 
+let timer;
 
 //Se il gioco è iniziato fai partire il timer
 const startQuiz = () => {
@@ -46,15 +46,15 @@ const stopTimer = () => {
 };
 
 // Calcola il punteggio del quiz
-const score = computed(()=>{
-  let value = 0
-  questions.value.map(q=>{
-    if(q.selected == q.answer){
-      value++
+const score = computed(() => {
+  let value = 0;
+  questions.value.map((q) => {
+    if (q.selected == q.answer) {
+      value++;
     }
-  })
-  return value
-})
+  });
+  return value;
+});
 
 // Ottieni la domanda corrente
 const getCurrentQuestion = computed(() => {
@@ -70,7 +70,6 @@ const SetAnswer = (evt) => {
   stopTimer(); // Fermare il timer quando viene selezionata una risposta
 };
 
-
 // Passa alla prossima domanda o completa il quiz se tutte le domande sono state risposte
 const NextQuestion = () => {
   stopTimer(); // Fermare il timer quando si passa alla prossima domanda
@@ -81,75 +80,74 @@ const NextQuestion = () => {
     quizCompleted.value = true;
   }
 };
-
-
 </script>
 
 <template>
-    <main class="app">
-      <h1>Il quiz</h1>
-      <h2>Vinci un frutto del diavolo!</h2>
-  
-      <!-- Passaggio iniziale: Mostra solo se il quiz non è ancora iniziato -->
-      <section class="quiz-initial" v-if="!quizStarted && !quizCompleted">
-        <button @click="startQuiz">Inizia il quiz</button>
-      </section>
-      <!-- Se il quiz non è completato, visualizza la domanda corrente -->
-      <section class="quiz" v-if="quizStarted && !quizCompleted">
-        <div class="quiz-info">
-          <span class="question">{{ getCurrentQuestion.question }}</span>
-          <span class="score">Punteggio {{ score }} / {{ questions.length }}</span>
-          <div class="timer">{{ timeLeft }}s</div> 
-        </div>
-  
-        <div class="options">
-          <!-- Itera tra le opzioni possibili -->
-          <label
-            v-for="(option, index) in getCurrentQuestion.options"
-            :key="index"
-            :class="`option ${getCurrentQuestion.selected == index 
-                            ? index == getCurrentQuestion.answer 
-                            ? 'correct' 
-                            : 'wrong' 
-                            :''
-                            }
+  <main class="app">
+    <h1>Il quiz</h1>
+    <h2>Vinci un frutto del diavolo!</h2>
+
+    <!-- Passaggio iniziale: Mostra solo se il quiz non è ancora iniziato -->
+    <section class="quiz-initial" v-if="!quizStarted && !quizCompleted">
+      <button @click="startQuiz">Inizia il quiz</button>
+    </section>
+    <!-- Se il quiz non è completato, visualizza la domanda corrente -->
+    <section class="quiz" v-if="quizStarted && !quizCompleted">
+      <div class="quiz-info">
+        <span class="question">{{ getCurrentQuestion.question }}</span>
+        <span class="score"
+          >Punteggio {{ score }} / {{ questions.length }}</span
+        >
+        <div class="timer">{{ timeLeft }}s</div>
+      </div>
+
+      <div class="options">
+        <!-- Itera tra le opzioni possibili -->
+        <label
+          v-for="(option, index) in getCurrentQuestion.options"
+          :key="index"
+          :class="`option ${
+            getCurrentQuestion.selected == index
+              ? index == getCurrentQuestion.answer
+                ? 'correct'
+                : 'wrong'
+              : ''
+          }
                             ${
-                            getCurrentQuestion.selected != null &&
-                            index != getCurrentQuestion.selected
-                            ? 'disabled'
-                            :''
-                            }`
-                          "
-          >
-            <!-- Input radio per la selezione dell'opzione -->
-            <input
-              type="radio"
-              :name="getCurrentQuestion.index"
-              :value="index"
-              v-model="getCurrentQuestion.selected"
-              :disabled="getCurrentQuestion.selected !== null"
-              @change="SetAnswer"
-            />
-            <span>{{ option }}</span>
-          </label>
-        </div>
-        <!-- Bottone per passare alla prossima domanda -->
-        <button @click="NextQuestion" :disabled="!getCurrentQuestion.selected">
-          {{
-            getCurrentQuestion.index === questions.length - 1
-              ? 'Finito'
-              : getCurrentQuestion.selected === null
-              ? 'Scegli una opzione'
-              : 'Prossima domanda'
-          }}
-        </button>
-      </section>
-  
-      <!-- Se il quiz è completato, mostra il punteggio finale -->
-      <section v-if="quizCompleted">
-        <h2>Hai finito il quiz!</h2>
-        <p>il tuo punteggio è {{ score }} / {{ questions.length }}</p>
-      </section>
-    </main>
-  </template>
-  
+                              getCurrentQuestion.selected != null &&
+                              index != getCurrentQuestion.selected
+                                ? 'disabled'
+                                : ''
+                            }`"
+        >
+          <!-- Input radio per la selezione dell'opzione -->
+          <input
+            type="radio"
+            :name="getCurrentQuestion.index"
+            :value="index"
+            v-model="getCurrentQuestion.selected"
+            :disabled="getCurrentQuestion.selected !== null"
+            @change="SetAnswer"
+          />
+          <span>{{ option }}</span>
+        </label>
+      </div>
+      <!-- Bottone per passare alla prossima domanda -->
+      <button @click="NextQuestion" :disabled="!getCurrentQuestion.selected">
+        {{
+          getCurrentQuestion.index === questions.length - 1
+            ? "Finito"
+            : getCurrentQuestion.selected === null
+            ? "Scegli una opzione"
+            : "Prossima domanda"
+        }}
+      </button>
+    </section>
+
+    <!-- Se il quiz è completato, mostra il punteggio finale -->
+    <section v-if="quizCompleted">
+      <h2>Hai finito il quiz!</h2>
+      <p>il tuo punteggio è {{ score }} / {{ questions.length }}</p>
+    </section>
+  </main>
+</template>

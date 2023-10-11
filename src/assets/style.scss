@@ -1,7 +1,7 @@
 // Variabili
-$font-family: 'Montserrat', sans-serif;
+$font-family: "Montserrat", sans-serif;
 $primary-bg-color: #271c36;
-$white-color: #FFF;
+$white-color: #fff;
 $quiz-bg-color: #382a4b;
 $quiz-option-bg: #271c36;
 $quiz-option-hover-bg: #2d213f;
@@ -57,7 +57,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  height: 100vh;
+  height: 100%;
 }
 
 a {
@@ -65,12 +65,9 @@ a {
   color: $white-color;
 
   &:hover {
-      text-decoration: underline; /* Aggiungi la sottolineatura al passaggio del mouse */
+    text-decoration: underline; /* Aggiungi la sottolineatura al passaggio del mouse */
   }
-
-  
 }
-
 
 h1 {
   font-size: 2rem;
@@ -89,7 +86,7 @@ h1 {
   justify-content: space-between;
   margin-bottom: 1rem;
   .question {
-    color: #8F8F8F;
+    color: #8f8f8f;
     font-size: 1.25rem;
   }
   .score {
@@ -114,8 +111,10 @@ h1 {
   @include option($disabled-option-opacity);
 }
 
-button, .my-router-link {
+button,
+.my-router-link {
   appearance: none;
+  width: 20rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -139,7 +138,11 @@ h2 {
 }
 
 p {
-  color: #8F8F8F;
+  color: #8f8f8f;
   font-size: 1.5rem;
   text-align: center;
+}
+
+.spacer {
+  height: 230px;
 }
