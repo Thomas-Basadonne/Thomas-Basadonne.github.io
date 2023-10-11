@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <router-link class="navbar-brand" to="/">AnimeQuiz</router-link>
+    <router-link class="navbar-brand fw-bold" to="/">AnimeQuiz</router-link>
     <button
       class="navbar-toggler"
       type="button"
@@ -18,7 +18,7 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle fw-bold"
             href="#"
             id="navbarDropdownMenuLink"
             role="button"
@@ -46,7 +46,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a href="https://www.linkedin.com/in/thomasbasadonne/" class="nav-link" target="_blank">About me</a>
+          <a href="https://www.linkedin.com/in/thomasbasadonne/" class="nav-link fw-bold" target="_blank">About me</a>
         </li>
       </ul>
     </div>

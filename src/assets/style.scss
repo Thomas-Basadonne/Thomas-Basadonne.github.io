@@ -61,9 +61,16 @@ body {
 }
 
 a {
-    text-decoration: none;
-    color: $button-text-color; 
+  text-decoration: none;
+  color: $white-color;
+
+  &:hover {
+      text-decoration: underline; /* Aggiungi la sottolineatura al passaggio del mouse */
   }
+
+  
+}
+
 
 h1 {
   font-size: 2rem;

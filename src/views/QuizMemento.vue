@@ -1,10 +1,12 @@
 <script>
 import Quiz from '../components/Quiz.vue';
+import AppHeader from '../components/AppHeader.vue';
 
 export default {
 
   components: {
     Quiz,
+    AppHeader
   },
 
   data() {
@@ -35,6 +37,7 @@ export default {
 </script>
 
 <template>
+  <AppHeader/>
   <Quiz :questions="mementoQuestions" />
 </template>
 
