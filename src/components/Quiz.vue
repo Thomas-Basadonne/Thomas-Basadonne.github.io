@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, defineProps } from "vue";
+import { ref, computed } from "vue";
 
 const { questions: initialQuestions } = defineProps(["questions"]);
 
@@ -85,19 +85,40 @@ const NextQuestion = () => {
 <template>
   <main class="app">
     <h1>Il quiz</h1>
-    <h2>Vinci un frutto del diavolo!</h2>
+    <h2>Migliora le tue skill!</h2>
 
     <!-- Passaggio iniziale: Mostra solo se il quiz non è ancora iniziato -->
-    <section class="quiz-initial" v-if="!quizStarted && !quizCompleted">
-      <button @click="startQuiz">Inizia il quiz</button>
+    <section class="info-box" v-if="!quizStarted && !quizCompleted">
+      <div class="info-title text-center fs-4 my-2 fw-bold">
+        <span>Le regole del quiz</span>
+      </div>
+      <hr />
+      <div class="info-list">
+        <div class="info">
+          1. Avrai solo <span>15 secondi</span> per ogni domanda.
+        </div>
+        <div class="info">
+          2. Una volta selezionata una risposta non puoi cambiarla.
+        </div>
+        <div class="info">
+          3. Una volta scaduto il tempo passerai alla prossima domanda.
+        </div>
+        <div class="info">
+          4. Non puoi uscire dal quiz mentre lo stai svolgendo.
+        </div>
+        <div class="info">5. Ogni risposta corretta vale un punto.</div>
+      </div>
+      <hr />
+      <div class="start-btn text-center">
+        <button @click="startQuiz">Inizia il quiz</button>
+      </div>
     </section>
+
     <!-- Se il quiz non è completato, visualizza la domanda corrente -->
     <section class="quiz" v-if="quizStarted && !quizCompleted">
       <div class="quiz-info">
         <span class="question">{{ getCurrentQuestion.question }}</span>
-        <span class="score"
-          >Punteggio {{ score }} / {{ questions.length }}</span
-        >
+        <span class="score">{{ score }} / {{ questions.length }}</span>
         <div class="timer">{{ timeLeft }}s</div>
       </div>
 
@@ -112,13 +133,12 @@ const NextQuestion = () => {
                 ? 'correct'
                 : 'wrong'
               : ''
-          }
-                            ${
-                              getCurrentQuestion.selected != null &&
-                              index != getCurrentQuestion.selected
-                                ? 'disabled'
-                                : ''
-                            }`"
+          }${
+            getCurrentQuestion.selected != null &&
+            index != getCurrentQuestion.selected
+              ? 'disabled'
+              : ''
+          }`"
         >
           <!-- Input radio per la selezione dell'opzione -->
           <input
@@ -151,3 +171,21 @@ const NextQuestion = () => {
     </section>
   </main>
 </template>
+
+<style lang="scss" scoped>
+.info-box {
+  padding: 1rem;
+  width: 100%;
+  max-width: 640px;
+  background-color: #fff;
+  color: #060606;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+
+  span {
+    color: #007bff;
+  }
+}
+</style>

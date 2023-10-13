@@ -1,26 +1,30 @@
 // Variabili
 $font-family: "Montserrat", sans-serif;
-$primary-bg-color: #271c36;
+$primary-bg-color: #427aff;
 $white-color: #fff;
-$quiz-bg-color: #382a4b;
-$quiz-option-bg: #271c36;
-$quiz-option-hover-bg: #2d213f;
-$correct-option-bg: #2cce7d;
-$wrong-option-bg: #ff5a5f;
+$dark-color: #060606;
+$quiz-bg-color: #f0f8ff;
+$quiz-option-bg: #82a3f1;
+$quiz-option-hover-bg: #427aff;
+$correct-option-bg: #00ff2a;
+$wrong-option-bg: #f73d44;
 $disabled-option-opacity: 0.5;
-$button-bg-color: #2cce7d;
-$button-text-color: #2d213f;
+$button-bg-color: #007bff;
+$button-text-color: #fff;
 
 // Mixin per la selezione dell'opzione
 @mixin option($bg-color) {
   padding: 1rem;
   display: block;
+  color: $dark-color;
+  font-weight: 600;
   background-color: $bg-color;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
   &:hover {
     background-color: $quiz-option-hover-bg;
+    color: $white-color;
   }
   &:last-of-type {
     margin-bottom: 0;
@@ -79,19 +83,36 @@ h1 {
   padding: 1rem;
   width: 100%;
   max-width: 640px;
+  border-radius: 5px;
 }
 
 .quiz-info {
   display: flex;
+  align-items: baseline;
   justify-content: space-between;
   margin-bottom: 1rem;
+  color: $dark-color;
+  font-size: 1.25rem;
   .question {
-    color: #8f8f8f;
-    font-size: 1.25rem;
+    font-size: larger;
+    font-weight: 600;
   }
   .score {
+    margin-left: auto;
+    margin-right: 1rem;
+    padding: 0.5rem 0.3rem;
+    border-radius: 8px;
     color: $white-color;
-    font-size: 1.25rem;
+    background-color: $primary-bg-color;
+  }
+  .timer {
+    background-color: $wrong-option-bg;
+    color: $white-color;
+    width: 2.4rem; /* Larghezza uguale all'altezza */
+    height: 2.4rem; /* Larghezza uguale all'altezza */
+    line-height: 2.4rem;
+    text-align: center;
+    border-radius: 50%;
   }
 }
 
@@ -126,6 +147,7 @@ button,
   font-size: 1.2rem;
   border-radius: 0.5rem;
   margin-top: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   &:disabled {
     opacity: $disabled-option-opacity;
   }
