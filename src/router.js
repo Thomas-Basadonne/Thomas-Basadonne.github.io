@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "./views/Home.vue";
-import QuizHtml from "./views/QuizHtml.vue";
-import QuizCss from "./views/QuizCss.vue";
-import QuizJs from "./views/QuizJs.vue";
+import QuizHtml from "./views/front/QuizHtml.vue";
+import QuizCss from "./views/front/QuizCss.vue";
+import QuizJs from "./views/front/QuizJs.vue";
 
 const router = createRouter({
   history: createWebHistory(),
