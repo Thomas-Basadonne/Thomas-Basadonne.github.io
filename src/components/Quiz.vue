@@ -84,8 +84,10 @@ const NextQuestion = () => {
 
 <template>
   <main class="app">
-    <h1>Il quiz</h1>
-    <h2>Migliora le tue skill!</h2>
+    <div class="quiz-head mb-3">
+      <h1>Il quiz</h1>
+      <h4 class="mb-1">Migliora le tue skill!</h4>
+    </div>
 
     <!-- Passaggio iniziale: Mostra solo se il quiz non è ancora iniziato -->
     <section class="info-box" v-if="!quizStarted && !quizCompleted">

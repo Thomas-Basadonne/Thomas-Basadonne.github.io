@@ -69,13 +69,20 @@ a {
   color: $white-color;
 
   &:hover {
-    text-decoration: underline; /* Aggiungi la sottolineatura al passaggio del mouse */
+    text-decoration: underline;
   }
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+.home-head,
+.quiz-head {
+  color: #007bff;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 50px;
+  text-align: center;
+  width: 400px;
+  max-width: 500px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .quiz {
@@ -108,8 +115,8 @@ h1 {
   .timer {
     background-color: $wrong-option-bg;
     color: $white-color;
-    width: 2.4rem; /* Larghezza uguale all'altezza */
-    height: 2.4rem; /* Larghezza uguale all'altezza */
+    width: 2.4rem;
+    height: 2.4rem;
     line-height: 2.4rem;
     text-align: center;
     border-radius: 50%;

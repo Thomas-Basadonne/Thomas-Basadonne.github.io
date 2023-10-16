@@ -1,34 +1,34 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
-import Home from './views/Home.vue'
-import QuizOnePiece from './views/QuizOnePiece.vue';
-import QuizHellsParadise from './views/QuizHellsParadise.vue';
-import QuizMemento from './views/QuizMemento.vue';
+import Home from "./views/Home.vue";
+import QuizHtml from "./views/QuizHtml.vue";
+import QuizCss from "./views/QuizCss.vue";
+import QuizJs from "./views/QuizJs.vue";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/',
-      name: 'Home',
+      path: "/",
+      name: "Home",
       component: Home,
     },
     {
-      path: '/quiz-one-piece',
-      name: 'QuizOnePiece',
-      component: QuizOnePiece,
+      path: "/quiz-html",
+      name: "QuizHtml",
+      component: QuizHtml,
     },
     {
-      path: '/quiz-hells-paradise',
-      name: 'QuizHellsParadise',
-      component: QuizHellsParadise,
+      path: "/quiz-css",
+      name: "QuizCss",
+      component: QuizCss,
     },
     {
-      path: '/quiz-memento',
-      name: 'QuizMemento',
-      component: QuizMemento,
+      path: "/quiz-js",
+      name: "QuizJs",
+      component: QuizJs,
     },
   ],
 });
 
-export {router};
+export { router };

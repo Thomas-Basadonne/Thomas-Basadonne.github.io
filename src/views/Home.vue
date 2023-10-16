@@ -16,9 +16,13 @@ export default {
 </script>
 
 <template>
-  <div class="home container">
-    <h1 class="text-center my-4 fw-bold">{{ title }}</h1>
-    <h5 class="text-center my-4">Allenati con dei quiz a risposta multipla!</h5>
+  <div class="home container d-flex flex-column">
+    <div class="home-head align-self-center my-3">
+      <h1 class="text-center my-3 fw-bold">{{ title }}</h1>
+      <h5 class="text-center my-3">
+        Allenati con dei quiz a risposta multipla!
+      </h5>
+    </div>
 
     <div class="quiz-btn-container container">
       <div class="row justify-content-center">
@@ -28,13 +32,13 @@ export default {
           <div
             class="d-flex flex-column justify-content-between align-items-center"
           >
-            <router-link to="/quiz-one-piece" class="my-router-link"
+            <router-link to="/quiz-html" class="my-router-link"
               >Vai al quiz HTML5</router-link
             >
-            <router-link to="/quiz-hells-paradise" class="my-router-link"
+            <router-link to="/quiz-css" class="my-router-link"
               >Vai al quiz CSS</router-link
             >
-            <router-link to="/quiz-memento" class="my-router-link"
+            <router-link to="/quiz-js" class="my-router-link"
               >Vai al quiz JavaScript</router-link
             >
           </div>
