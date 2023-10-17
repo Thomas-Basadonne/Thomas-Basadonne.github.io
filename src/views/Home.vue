@@ -24,11 +24,11 @@ export default {
       </h5>
     </div>
 
-    <div class="quiz-btn-container container">
+    <div class="quiz-btn-container container mb-5">
       <div class="row justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-6 col-12">
           <!-- Front-End -->
-          <h2 class="fw-bold my-3">Front-End</h2>
+          <h2 class="fw-bold mt-5 mb-3">Front-End</h2>
           <div
             class="d-flex flex-column justify-content-between align-items-center"
           >
@@ -47,9 +47,9 @@ export default {
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6 col-12">
           <!-- Back-End -->
-          <h2 class="fw-bold my-3">Back-End</h2>
+          <h2 class="fw-bold mt-5 mb-3">Back-End</h2>
           <div
             class="d-flex flex-column justify-content-between align-items-center"
           >
@@ -70,7 +70,7 @@ export default {
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-6 col-12">
           <!-- Database -->
           <h2 class="fw-bold mt-5 mb-3">Database</h2>
           <div
@@ -91,7 +91,7 @@ export default {
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6 col-12">
           <!-- Altro -->
           <h2 class="fw-bold mt-5 mb-3">FrameWork</h2>
 

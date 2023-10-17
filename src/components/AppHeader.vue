@@ -2,18 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <router-link class="navbar-brand fw-bold" to="/">DevQuiz</router-link>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
             <a
@@ -26,20 +15,23 @@
             >
               Lista quiz
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <ul
+              class="dropdown-menu d-sm-none"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
               <li>
-                <router-link to="/quiz-one-piece" class="dropdown-item"
-                  >Vai al quiz One Piece</router-link
+                <router-link to="/quiz-html" class="dropdown-item"
+                  >Vai al quiz HTML</router-link
                 >
               </li>
               <li>
-                <router-link to="/quiz-hells-paradise" class="dropdown-item"
-                  >Vai al quiz Hells Paradise</router-link
+                <router-link to="/quiz-css" class="dropdown-item"
+                  >Vai al quiz CSS</router-link
                 >
               </li>
               <li>
-                <router-link to="/quiz-memento" class="dropdown-item"
-                  >Vai al quiz Memento</router-link
+                <router-link to="/quiz-scss" class="dropdown-item"
+                  >Vai al quiz SCSS</router-link
                 >
               </li>
             </ul>

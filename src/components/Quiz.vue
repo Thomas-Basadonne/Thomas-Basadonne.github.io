@@ -15,7 +15,7 @@ const quizCompleted = ref(false);
 const currentQuestion = ref(0);
 
 // Variabile per la durata timer
-const timeLeft = ref(10);
+const timeLeft = ref(20);
 
 // Variabile per il timer
 let timer;
@@ -28,7 +28,7 @@ const startQuiz = () => {
 
 // Funzione per avviare il timer
 const startTimer = () => {
-  timeLeft.value = 10; // Resetta il tempo a 30 secondi
+  timeLeft.value = 20; // Resetta il tempo a 20 secondi
   timer = setInterval(() => {
     if (timeLeft.value > 0) {
       timeLeft.value--;
@@ -90,12 +90,12 @@ const NextQuestion = () => {
     </div>
 
     <!-- Passaggio iniziale: Mostra solo se il quiz non è ancora iniziato -->
-    <section class="info-box" v-if="!quizStarted && !quizCompleted">
-      <div class="info-title text-center fs-4 my-2 fw-bold">
+    <section class="info-box text-center" v-if="!quizStarted && !quizCompleted">
+      <div class="info-title fs-4 my-2 fw-bold">
         <span>Le regole del quiz</span>
       </div>
       <hr />
-      <div class="info-list">
+      <div class="info-list text-start">
         <div class="info">
           1. Avrai solo <span>15 secondi</span> per ogni domanda.
         </div>
@@ -111,17 +111,23 @@ const NextQuestion = () => {
         <div class="info">5. Ogni risposta corretta vale un punto.</div>
       </div>
       <hr />
-      <div class="start-btn text-center">
-        <button @click="startQuiz">Inizia il quiz</button>
+      <div class="start-btn">
+        <div class="d-md-flex justify-content-center">
+          <button @click="startQuiz">Inizia il quiz</button>
+        </div>
       </div>
     </section>
 
     <!-- Se il quiz non è completato, visualizza la domanda corrente -->
     <section class="quiz" v-if="quizStarted && !quizCompleted">
-      <div class="quiz-info">
+      <!-- <div class="quiz-info">
         <span class="question">{{ getCurrentQuestion.question }}</span>
         <span class="score">{{ score }} / {{ questions.length }}</span>
         <div class="timer">{{ timeLeft }}s</div>
+      </div> -->
+
+      <div class="quiz-info">
+        <span class="question">{{ getCurrentQuestion.question }}</span>
       </div>
 
       <div class="options">
@@ -155,15 +161,21 @@ const NextQuestion = () => {
         </label>
       </div>
       <!-- Bottone per passare alla prossima domanda -->
-      <button @click="NextQuestion" :disabled="!getCurrentQuestion.selected">
-        {{
-          getCurrentQuestion.index === questions.length - 1
-            ? "Finito"
-            : getCurrentQuestion.selected === null
-            ? "Scegli una opzione"
-            : "Prossima domanda"
-        }}
-      </button>
+      <div class="quiz-info">
+        <button @click="NextQuestion" :disabled="!getCurrentQuestion.selected">
+          {{
+            getCurrentQuestion.index === questions.length - 1
+              ? "Finito"
+              : getCurrentQuestion.selected === null
+              ? "Scegli una opzione"
+              : "Prossima domanda"
+          }}
+        </button>
+        <div class="stats">
+          <div class="score">{{ score }} / {{ questions.length }}</div>
+          <div class="timer">{{ timeLeft }}s</div>
+        </div>
+      </div>
     </section>
 
     <!-- Se il quiz è completato, mostra il punteggio finale -->

@@ -12,6 +12,31 @@ $disabled-option-opacity: 0.5;
 $button-bg-color: #007bff;
 $button-text-color: #fff;
 
+// Definizioni delle animazioni keyframes
+@keyframes celebrate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sad {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 // Mixin per la selezione dell'opzione
 @mixin option($bg-color) {
   padding: 1rem;
@@ -31,9 +56,11 @@ $button-text-color: #fff;
   }
   &.correct {
     background-color: $correct-option-bg;
+    animation: celebrate 1s linear infinite;
   }
   &.wrong {
     background-color: $wrong-option-bg;
+    animation: sad 1s linear infinite;
   }
   &.disabled {
     opacity: $disabled-option-opacity;
@@ -100,26 +127,40 @@ a {
   margin-bottom: 1rem;
   color: $dark-color;
   font-size: 1.25rem;
+
+  /* Aggiungi una media query per schermi più piccoli */
+  @media (max-width: 768px) {
+    flex-direction: column; /* Imposta la direzione in colonna su schermi più piccoli */
+    align-items: center; /* Centra gli elementi verticalmente */
+    text-align: center; /* Allinea il testo al centro */
+  }
+
   .question {
     font-size: larger;
     font-weight: 600;
   }
-  .score {
-    margin-left: auto;
-    margin-right: 1rem;
-    padding: 0.5rem 0.3rem;
-    border-radius: 8px;
-    color: $white-color;
-    background-color: $primary-bg-color;
-  }
-  .timer {
-    background-color: $wrong-option-bg;
-    color: $white-color;
-    width: 2.4rem;
-    height: 2.4rem;
-    line-height: 2.4rem;
-    text-align: center;
-    border-radius: 50%;
+
+  .stats {
+    display: flex;
+    margin-top: 1rem;
+    .score {
+      white-space: nowrap;
+      margin-right: 0.2rem;
+      padding: 0.5rem 3rem;
+      border-radius: 8px;
+      color: $white-color;
+      background-color: $primary-bg-color;
+    }
+
+    .timer {
+      background-color: $wrong-option-bg;
+      color: $white-color;
+      text-align: center;
+      align-self: center;
+      padding: 0.5rem 3rem;
+      border-radius: 8px;
+      min-width: 128.25px;
+    }
   }
 }
 
@@ -172,6 +213,10 @@ p {
   text-align: center;
 }
 
-.spacer {
-  height: 230px;
+/* Regole per rendere il bottone responsive */
+@media (max-width: 768px) {
+  button,
+  .my-router-link {
+    width: 100%; /* Imposta la larghezza al 100% su schermi più piccoli */
+  }
 }
