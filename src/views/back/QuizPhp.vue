@@ -37,8 +37,8 @@ export default {
           question: "Cosa rappresenta il termine 'WAMP' in PHP?",
           answer: 0,
           options: [
-            "WAMP è un acronimo che sta per 'Windows, Apache, MySQL, PHP' ed è una combinazione di software comunemente utilizzata per lo sviluppo web su sistemi Windows.",
-            "WAMP è un framework PHP popolare.",
+            "WAMP è un acronimo che sta per 'Windows, Apache, MySQL, PHP'",
+            "WAMP è un framework PHP popolare su sistemi Windows.",
             "WAMP è una libreria per il controllo degli accessi in PHP.",
             "WAMP è un protocollo di comunicazione utilizzato nelle applicazioni web.",
           ],
@@ -70,7 +70,7 @@ export default {
           question: "Cosa rappresenta il termine 'XSS' in PHP?",
           answer: 0,
           options: [
-            "Cross-Site Scripting (XSS) è una vulnerabilità di sicurezza che consente a un attaccante di iniettare script malevoli in pagine web visualizzate da altri utenti.",
+            "XSS è una vulnerabilità di sicurezza che consente a un attaccante di iniettare script malevoli in pagine web",
             "XSS è un linguaggio di scripting utilizzato per creare siti web dinamici.",
             "XSS è una libreria per la gestione delle sessioni in PHP.",
             "XSS è un framework PHP per lo sviluppo di applicazioni web.",
@@ -82,7 +82,7 @@ export default {
           answer: 1,
           options: [
             "Composer è un'ambiente di sviluppo integrato (IDE) per PHP.",
-            "Composer è uno strumento di gestione delle dipendenze utilizzato per gestire le librerie e i pacchetti in progetti PHP.",
+            "Composer è uno strumento di gestione delle dipendenze utilizzato per le librerie e i pacchetti in progetti PHP.",
             "Composer è un sistema di gestione dei database in PHP.",
             "Composer è un'editor di codice open source.",
           ],
@@ -103,10 +103,10 @@ export default {
           question: "Cosa rappresenta il termine 'Laravel' in PHP?",
           answer: 0,
           options: [
-            "Laravel è un framework PHP open source ampiamente utilizzato per lo sviluppo di applicazioni web.",
+            "Laravel è un framework PHP per lo sviluppo di applicazioni web.",
             "Laravel è una libreria per la manipolazione delle immagini in PHP.",
             "Laravel è un sistema operativo per server web.",
-            "Laravel è un database NoSQL.",
+            "Laravel è un database NoSQL open source.",
           ],
           selected: null,
         },
