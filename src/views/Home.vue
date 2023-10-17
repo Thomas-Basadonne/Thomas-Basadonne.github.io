@@ -38,6 +38,9 @@ export default {
             <router-link to="/quiz-css" class="my-router-link"
               >Vai al quiz CSS</router-link
             >
+            <router-link to="/quiz-scss" class="my-router-link"
+              >Vai al quiz SCSS</router-link
+            >
             <router-link to="/quiz-js" class="my-router-link"
               >Vai al quiz JavaScript</router-link
             >
@@ -50,14 +53,17 @@ export default {
           <div
             class="d-flex flex-column justify-content-between align-items-center"
           >
-            <router-link to="/quiz-one-piece" class="my-router-link"
+            <router-link to="/quiz-php" class="my-router-link"
               >Vai al quiz PHP</router-link
             >
-            <router-link to="/quiz-hells-paradise" class="my-router-link"
+            <router-link to="/quiz-java" class="my-router-link"
               >Vai al quiz JAVA</router-link
             >
-            <router-link to="/quiz-memento" class="my-router-link"
-              >Vai al quiz Memento</router-link
+            <router-link to="/quiz-py" class="my-router-link"
+              >Vai al quiz Python</router-link
+            >
+            <router-link to="/quiz-ruby" class="my-router-link"
+              >Vai al quiz Ruby</router-link
             >
           </div>
         </div>
@@ -70,14 +76,17 @@ export default {
           <div
             class="d-flex flex-column justify-content-between align-items-center"
           >
-            <router-link to="/quiz-one-piece" class="my-router-link"
+            <router-link to="/quiz-sql" class="my-router-link"
+              >Vai al quiz SQL</router-link
+            >
+            <router-link to="/quiz-mysql" class="my-router-link"
               >Vai al quiz MySQL</router-link
             >
-            <router-link to="/quiz-hells-paradise" class="my-router-link"
-              >Vai al quiz Hells Paradise</router-link
+            <router-link to="/quiz-mongodb" class="my-router-link"
+              >Vai al quiz MongoDB</router-link
             >
-            <router-link to="/quiz-memento" class="my-router-link"
-              >Vai al quiz Memento</router-link
+            <router-link to="/quiz-redis" class="my-router-link"
+              >Vai al quiz Redis</router-link
             >
           </div>
         </div>
@@ -89,14 +98,17 @@ export default {
           <div
             class="d-flex flex-column justify-content-between align-items-center"
           >
-            <router-link to="/quiz-one-piece" class="my-router-link"
-              >Vai al quiz One Piece</router-link
+            <router-link to="/quiz-laravel" class="my-router-link"
+              >Vai al quiz Laravel</router-link
             >
-            <router-link to="/quiz-hells-paradise" class="my-router-link"
-              >Vai al quiz Hells Paradise</router-link
+            <router-link to="/quiz-react" class="my-router-link"
+              >Vai al quiz React</router-link
             >
-            <router-link to="/quiz-memento" class="my-router-link"
-              >Vai al quiz Memento</router-link
+            <router-link to="/quiz-vue" class="my-router-link"
+              >Vai al quiz Vue</router-link
+            >
+            <router-link to="/quiz-spring" class="my-router-link"
+              >Vai al quiz Spring</router-link
             >
           </div>
         </div>
