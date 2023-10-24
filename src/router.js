@@ -2,25 +2,25 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "./views/Home.vue";
 // front
-import QuizHtml from "./views/front/QuizHtml.vue";
-import QuizCss from "./views/front/QuizCss.vue";
-import QuizJs from "./views/front/QuizJs.vue";
-import QuizScss from "./views/front/QuizScss.vue";
+import QuizHtml from "./components/content/front/QuizHtml.vue";
+import QuizCss from "./components/content/front/QuizCss.vue";
+import QuizJs from "./components/content/front/QuizJs.vue";
+import QuizScss from "./components/content/front/QuizScss.vue";
 // back
-import QuizPhp from "./views/back/QuizPhp.vue";
-import QuizJava from "./views/back/QuizJava.vue";
-import QuizPy from "./views/back/QuizPy.vue";
-import QuizRuby from "./views/back/QuizRuby.vue";
+import QuizPhp from "./components/content/back/QuizPhp.vue";
+import QuizJava from "./components/content/back/QuizJava.vue";
+import QuizPy from "./components/content/back/QuizPy.vue";
+import QuizRuby from "./components/content/back/QuizRuby.vue";
 // db
-import QuizSql from "./views/db/QuizSql.vue";
-import QuizMySql from "./views/db/QuizMySql.vue";
-import QuizMongoDB from "./views/db/QuizMongoDB.vue";
-import QuizRedis from "./views/db/QuizRedis.vue";
+import QuizSql from "./components/content/db/QuizSql.vue";
+import QuizMySql from "./components/content/db/QuizMySql.vue";
+import QuizMongoDB from "./components/content/db/QuizMongoDB.vue";
+import QuizRedis from "./components/content/db/QuizRedis.vue";
 // framework
-import QuizVue from "./views/framework/QuizVue.vue";
-import QuizReact from "./views/framework/QuizReact.vue";
-import QuizSpring from "./views/framework/QuizSpring.vue";
-import QuizLaravel from "./views/framework/QuizLaravel.vue";
+import QuizVue from "./components/content/framework/QuizVue.vue";
+import QuizReact from "./components/content/framework/QuizReact.vue";
+import QuizSpring from "./components/content/framework/QuizSpring.vue";
+import QuizLaravel from "./components/content/framework/QuizLaravel.vue";
 
 const router = createRouter({
   history: createWebHistory(),

@@ -1,6 +1,6 @@
 <script>
 // import MyComponent from "./components/MyComponent.vue";
-import AppFooter from "../components/AppFooter.vue";
+import AppFooter from "../components/_partials/AppFooter.vue";
 
 export default {
   data() {

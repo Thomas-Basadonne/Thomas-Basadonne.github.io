@@ -1,6 +1,6 @@
 <script>
-import Quiz from "../../components/Quiz.vue";
-import AppHeader from "../../components/AppHeader.vue";
+import Quiz from "../../../views/Quiz.vue";
+import AppHeader from "../../_partials/AppHeader.vue";
 
 export default {
   components: {
