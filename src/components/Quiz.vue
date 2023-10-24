@@ -84,7 +84,7 @@ const NextQuestion = () => {
 
 <template>
   <main class="app">
-    <div class="quiz-head mb-3">
+    <div v-if="!quizCompleted" class="quiz-head mb-3">
       <h1>Il quiz</h1>
       <h4 class="mb-1">Migliora le tue skill!</h4>
     </div>
@@ -120,16 +120,12 @@ const NextQuestion = () => {
 
     <!-- Se il quiz non è completato, visualizza la domanda corrente -->
     <section class="quiz" v-if="quizStarted && !quizCompleted">
-      <!-- <div class="quiz-info">
-        <span class="question">{{ getCurrentQuestion.question }}</span>
-        <span class="score">{{ score }} / {{ questions.length }}</span>
-        <div class="timer">{{ timeLeft }}s</div>
-      </div> -->
-
+      <!-- Domanda -->
       <div class="quiz-info">
         <span class="question">{{ getCurrentQuestion.question }}</span>
       </div>
 
+      <!-- Risposte -->
       <div class="options">
         <!-- Itera tra le opzioni possibili -->
         <label
@@ -148,7 +144,7 @@ const NextQuestion = () => {
               : ''
           }`"
         >
-          <!-- Input radio per la selezione dell'opzione -->
+          <!-- Input per la selezione dell'opzione -->
           <input
             type="radio"
             :name="getCurrentQuestion.index"
@@ -179,9 +175,69 @@ const NextQuestion = () => {
     </section>
 
     <!-- Se il quiz è completato, mostra il punteggio finale -->
-    <section v-if="quizCompleted">
-      <h2>Hai finito il quiz!</h2>
-      <p>il tuo punteggio è {{ score }} / {{ questions.length }}</p>
+    <section class="after-quiz" v-if="quizCompleted">
+      <div class="card">
+        <div class="card-body pt-0">
+          <!-- Testo in base al punteggio -->
+          <template v-if="score >= 0 && score <= 5">
+            <h1 class="fs-1 card-title py-2 mt-2">Hai finito il quiz!</h1>
+            <iframe
+              class="w-100"
+              src="https://giphy.com/embed/k8FRIfjD1lSobtDch1/video"
+              alt="Punteggio basso"
+            ></iframe>
+            <div class="main-card border border-top-0 mt-2">
+              <h5 class="fs-1 card-title py-4 mt-0">Non scoraggiarti!</h5>
+              <div
+                class="d-inline-flex justify-content-between align-items-baseline fs-2 fw-bold px-2 my-2"
+              >
+                <p class="final-score me-2">
+                  Il tuo punteggio è {{ score }} / {{ questions.length }}
+                </p>
+                <router-link to="/" id="pippo">Torna al menù</router-link>
+              </div>
+            </div>
+          </template>
+          <template v-else-if="score >= 6 && score <= 9">
+            <h1 class="fs-1 card-title py-2 mt-2">Hai finito il quiz!</h1>
+            <iframe
+              class="w-100"
+              src="https://giphy.com/embed/a0h7sAqON67nO"
+              alt="Punteggio basso"
+            ></iframe>
+            <div class="main-card border border-top-0 mt-2">
+              <h5 class="fs-1 card-title py-4 mt-0">Ottimo lavoro!</h5>
+              <div
+                class="d-inline-flex justify-content-between align-items-baseline fs-2 fw-bold px-2 my-2"
+              >
+                <p class="final-score me-2">
+                  Il tuo punteggio è {{ score }} / {{ questions.length }}
+                </p>
+                <router-link to="/" id="pippo">Torna al menù</router-link>
+              </div>
+            </div>
+          </template>
+          <template v-else>
+            <h1 class="fs-1 card-title py-2 mt-2">Hai finito il quiz!</h1>
+            <iframe
+              class="w-100"
+              src="https://giphy.com/embed/EBPvJ8wA04Kc0"
+              alt="Punteggio alto"
+            ></iframe>
+            <div class="main-card border border-top-0 mt-2">
+              <h5 class="fs-1 card-title py-4 mt-0">QUIZ PERFETTO!</h5>
+              <div
+                class="d-inline-flex justify-content-between align-items-baseline fs-2 fw-bold px-2 my-2"
+              >
+                <p class="final-score me-2">
+                  Il tuo punteggio è {{ score }} / {{ questions.length }}
+                </p>
+                <router-link to="/" id="pippo">Torna al menù</router-link>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
     </section>
   </main>
 </template>
@@ -201,5 +257,19 @@ const NextQuestion = () => {
   span {
     color: #007bff;
   }
+}
+
+.card-title {
+  width: 100%;
+  text-align: center;
+  background-color: #427aff;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+#pippo {
+  font-size: 1.8rem;
+  color: #007bff;
 }
 </style>
