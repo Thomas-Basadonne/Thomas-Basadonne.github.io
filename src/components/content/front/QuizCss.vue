@@ -10,6 +10,7 @@ export default {
 
   data() {
     return {
+      title: "CSS",
       cssQuestions: [
         {
           question: 'Cosa rappresenta la sigla "CSS"?',
@@ -129,7 +130,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="cssQuestions" />
+  <Quiz :questions="cssQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

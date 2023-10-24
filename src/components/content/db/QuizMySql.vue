@@ -10,6 +10,7 @@ export default {
 
   data() {
     return {
+      title: "MySQL",
       mysqlQuestions: [
         {
           question: "Cos'è MySQL?",
@@ -132,7 +133,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="mysqlQuestions" />
+  <Quiz :questions="mysqlQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

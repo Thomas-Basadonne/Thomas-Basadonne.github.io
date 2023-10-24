@@ -10,6 +10,7 @@ export default {
 
   data() {
     return {
+      title: "PHP",
       phpQuestions: [
         {
           question: "Cos'è PHP?",
@@ -118,7 +119,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="phpQuestions" />
+  <Quiz :questions="phpQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

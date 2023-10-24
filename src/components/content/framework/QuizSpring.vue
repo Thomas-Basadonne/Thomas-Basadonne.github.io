@@ -10,6 +10,7 @@ export default {
 
   data() {
     return {
+      title: "Spring",
       springQuestions: [
         {
           question: "Cos'è Spring?",
@@ -133,7 +134,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="springQuestions" />
+  <Quiz :questions="springQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

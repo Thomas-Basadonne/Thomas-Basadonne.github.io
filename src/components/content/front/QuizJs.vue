@@ -8,6 +8,7 @@ export default {
   },
   data() {
     return {
+      title: "JavaScript",
       jsQuestions: [
         {
           question: 'Qual è la differenza tra "let" e "var" in JavaScript?',
@@ -123,5 +124,5 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="jsQuestions" />
+  <Quiz :questions="jsQuestions" :title="title" />
 </template>

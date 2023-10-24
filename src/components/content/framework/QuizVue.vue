@@ -9,6 +9,7 @@ export default {
 
   data() {
     return {
+      title: "Vue.js",
       vueQuestions: [
         {
           question: "Cos'è Vue.js?",
@@ -129,7 +130,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="vueQuestions" />
+  <Quiz :questions="vueQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

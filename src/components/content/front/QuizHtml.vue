@@ -9,6 +9,7 @@ export default {
   },
   data() {
     return {
+      title: "HTML",
       htmlQuestions: [
         {
           question: "Cos'è HTML?",
@@ -97,7 +98,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="htmlQuestions" />
+  <Quiz :questions="htmlQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

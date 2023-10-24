@@ -10,6 +10,7 @@ export default {
 
   data() {
     return {
+      title: "REACT",
       reactQuestions: [
         {
           question: "Cos'è React?",
@@ -120,7 +121,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="reactQuestions" />
+  <Quiz :questions="reactQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

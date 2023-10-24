@@ -10,6 +10,7 @@ export default {
 
   data() {
     return {
+      title: "Redis",
       redisQuestions: [
         {
           question: "Cos'è Redis?",
@@ -131,7 +132,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="redisQuestions" />
+  <Quiz :questions="redisQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

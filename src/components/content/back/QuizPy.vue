@@ -9,6 +9,7 @@ export default {
 
   data() {
     return {
+      title: "PYTHON",
       pyQuestions: [
         {
           question: "Cos'è Python?",
@@ -131,7 +132,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="pyQuestions" />
+  <Quiz :questions="pyQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

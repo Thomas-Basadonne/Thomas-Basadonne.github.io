@@ -9,6 +9,7 @@ export default {
 
   data() {
     return {
+      title: "SQL",
       sqlQuestions: [
         {
           question: "Cos'è SQL?",
@@ -128,7 +129,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="sqlQuestions" />
+  <Quiz :questions="sqlQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

@@ -10,8 +10,10 @@ export default {
 
   data() {
     return {
+      title: "RUBY",
       rubyQuestions: [
         {
+          title: "RUBY",
           question: "Cos'è Ruby?",
           answer: 0,
           options: [
@@ -129,7 +131,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="rubyQuestions" />
+  <Quiz :questions="rubyQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

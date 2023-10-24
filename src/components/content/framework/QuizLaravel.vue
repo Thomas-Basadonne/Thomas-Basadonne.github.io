@@ -10,6 +10,7 @@ export default {
 
   data() {
     return {
+      title: "Laravel",
       laravelQuestions: [
         {
           question: "Cos'è Laravel?",
@@ -130,7 +131,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="laravelQuestions" />
+  <Quiz :questions="laravelQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

@@ -10,6 +10,7 @@ export default {
 
   data() {
     return {
+      title: "JAVA",
       javaQuestions: [
         {
           question: "Cos'è Java?",
@@ -125,7 +126,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="javaQuestions" />
+  <Quiz :questions="javaQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

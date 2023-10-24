@@ -8,6 +8,7 @@ export default {
   },
   data() {
     return {
+      title: "SCSS",
       scssQuestions: [
         {
           question: "Cos'è SCSS?",
@@ -114,5 +115,5 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="scssQuestions" />
+  <Quiz :questions="scssQuestions" :title="title" />
 </template>

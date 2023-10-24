@@ -10,6 +10,7 @@ export default {
 
   data() {
     return {
+      title: "MongoDB",
       mongodbQuestions: [
         {
           question: "Cos'è MongoDB?",
@@ -133,7 +134,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Quiz :questions="mongodbQuestions" />
+  <Quiz :questions="mongodbQuestions" :title="title" />
 </template>
 
 <style lang="scss" scoped></style>

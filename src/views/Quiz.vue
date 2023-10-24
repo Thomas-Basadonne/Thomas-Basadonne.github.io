@@ -1,7 +1,10 @@
 <script setup>
 import { ref, computed } from "vue";
 
-const { questions: initialQuestions } = defineProps(["questions"]);
+const { questions: initialQuestions, title } = defineProps([
+  "questions",
+  "title",
+]);
 
 const questions = ref(initialQuestions);
 
@@ -85,7 +88,7 @@ const NextQuestion = () => {
 <template>
   <main class="app">
     <div v-if="!quizCompleted" class="quiz-head mb-3">
-      <h1>Il quiz</h1>
+      <h1>Il quiz su {{ title }}</h1>
       <h4 class="mb-1">Migliora le tue skill!</h4>
     </div>
 
