@@ -73,7 +73,7 @@ export default {
             'La proprietà "z-index" determina la grandezza del testo in un elemento.',
             'La proprietà "z-index" controlla la dimensione orizzontale degli elementi.',
             'La proprietà "z-index" specifica l\'altezza di un elemento rispetto al contenuto sottostante.',
-            'La proprietà "z-index" controlla la sovrapposizione degli elementi, consentendo di posizionarli in profondità nello stack di visualizzazione.',
+            'La proprietà "z-index" controlla la sovrapposizione degli elementi.',
           ],
           selected: null,
         },
@@ -81,7 +81,7 @@ export default {
           question: 'Cos\'è la "media query" in CSS?',
           answer: 0,
           options: [
-            "Una regola CSS che cambia lo stile in base alle caratteristiche del dispositivo o della visualizzazione, come dimensioni dello schermo.",
+            "Una regola CSS che cambia lo stile in base alle caratteristiche del dispositivo.",
             "Una etichetta che identifica il supporto media di un elemento HTML.",
             "Un tipo di font specifico utilizzato per i testi mediatici.",
             "Una query per cercare file multimediali all'interno di un sito web.",

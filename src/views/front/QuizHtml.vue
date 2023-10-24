@@ -23,7 +23,7 @@ export default {
         },
         {
           question: "Qual è il tag HTML principale?",
-          answer: 2,
+          answer: 0,
           options: ["<html>", "<head>", "<body>", "<title>"],
           selected: null,
         },
@@ -41,7 +41,7 @@ export default {
         {
           question:
             "Quale tag viene utilizzato per creare un collegamento ipertestuale?",
-          answer: 3,
+          answer: 0,
           options: ["<a>", "<link>", "<href>", "<url>"],
           selected: null,
         },
@@ -61,13 +61,13 @@ export default {
         {
           question:
             "Qual è il tag per creare un'intestazione di primo livello?",
-          answer: 3,
+          answer: 0,
           options: ["<h1>", "<h2>", "<h3>", "<h4>"],
           selected: null,
         },
         {
           question: "Qual è il tag HTML per l'immagine?",
-          answer: 1,
+          answer: 0,
           options: ["<img>", "<image>", "<picture>", "<photo>"],
           selected: null,
         },
@@ -85,7 +85,7 @@ export default {
         {
           question:
             "Quale elemento HTML rappresenta un elemento di input del modulo?",
-          answer: 2,
+          answer: 1,
           options: ["<text>", "<input>", "<form>", "<button>"],
           selected: null,
         },

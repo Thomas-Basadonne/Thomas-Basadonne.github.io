@@ -93,7 +93,7 @@ export default {
           question: "Cosa rappresenta il termine 'two-way binding' in Vue.js?",
           answer: 1,
           options: [
-            "Il 'two-way binding' rappresenta la comunicazione bidirezionale tra il modello e la vista, in cui le modifiche nel modello si riflettono automaticamente nella vista e viceversa.",
+            "Il 'two-way binding' rappresenta la comunicazione bidirezionale tra il modello e la vista.",
             "Il 'two-way binding' rappresenta una direzione unica dalla vista al modello.",
             "Il 'two-way binding' rappresenta un tipo di linguaggio di programmazione.",
             "Il 'two-way binding' rappresenta una raccolta di dati non strutturati.",
@@ -104,7 +104,7 @@ export default {
           question: 'Cosa fa il comando "Vue.use" in Vue.js?',
           answer: 0,
           options: [
-            'Il comando "Vue.use" viene utilizzato per installare i plugin globali all\'interno di un progetto Vue.',
+            'Il comando "Vue.use" viene utilizzato per installare i plugin globali all\'interno di un progetto.',
             'Il comando "Vue.use" viene utilizzato per creare nuovi componenti Vue.',
             'Il comando "Vue.use" viene utilizzato per avviare l\'applicazione Vue.',
             'Il comando "Vue.use" viene utilizzato per generare dati casuali.',

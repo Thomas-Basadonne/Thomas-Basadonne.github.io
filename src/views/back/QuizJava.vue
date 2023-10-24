@@ -15,10 +15,10 @@ export default {
           question: "Cos'è Java?",
           answer: 0,
           options: [
-            "Java è un linguaggio di programmazione ad alto livello e una piattaforma informatica utilizzata per lo sviluppo di applicazioni software.",
+            "Java è un linguaggio di programmazione per lo sviluppo di applicazioni software.",
             "Java è un sistema operativo open source.",
             "Java è un framework per applicazioni mobili.",
-            "Java è un'azienda di produzione di hardware.",
+            "Java è un'azienda di produzione di hardware per lo sviluppo di applicazioni software.",
           ],
           selected: null,
         },
@@ -68,7 +68,7 @@ export default {
           options: [
             'Il metodo "hashCode()" restituisce un valore booleano in base a un input specificato.',
             'Il metodo "hashCode()" è utilizzato per la creazione di collegamenti ipertestuali in Java.',
-            'Il metodo "hashCode()" restituisce un codice hash intero per un oggetto Java, spesso utilizzato nelle strutture dati come le tabelle hash.',
+            'Il metodo "hashCode()" restituisce un codice hash intero per un oggetto Java.',
             'Il metodo "hashCode()" è utilizzato per la validazione dei dati in Java.',
           ],
           selected: null,
@@ -88,7 +88,7 @@ export default {
           question: 'Cosa fa il costrutto "try-catch" in Java?',
           answer: 0,
           options: [
-            'Il "try-catch" è utilizzato per gestire le eccezioni in Java, consentendo di catturare e gestire eventuali errori durante l\'esecuzione del codice.',
+            'Il "try-catch" è utilizzato per gestire le eccezioni in Java.',
             'Il "try-catch" è utilizzato per creare loop in Java.',
             'Il "try-catch" è utilizzato per creare strutture condizionali in Java.',
             'Il "try-catch" è utilizzato per dichiarare variabili in Java.',

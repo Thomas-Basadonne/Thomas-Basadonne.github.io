@@ -15,7 +15,7 @@ export default {
           question: "Cos'è MySQL?",
           answer: 0,
           options: [
-            "MySQL è un sistema di gestione di database relazionali open source ampiamente utilizzato.",
+            "MySQL è un sistema di gestione di database relazionali open source.",
             "MySQL è un sistema operativo.",
             "MySQL è un software per la progettazione di siti web.",
             "MySQL è un framework per applicazioni mobili.",
@@ -29,7 +29,7 @@ export default {
           options: [
             "Il linguaggio principale utilizzato per interagire con MySQL è Python.",
             "Il linguaggio principale utilizzato per interagire con MySQL è C++.",
-            "Il linguaggio principale utilizzato per interagire con MySQL è SQL (Structured Query Language).",
+            "Il linguaggio principale utilizzato per interagire con MySQL è SQL.",
             "Il linguaggio principale utilizzato per interagire con MySQL è Java.",
           ],
           selected: null,
@@ -105,7 +105,7 @@ export default {
           question: 'Cosa rappresenta il termine "indice" in MySQL?',
           answer: 3,
           options: [
-            'Un "indice" è una struttura di dati utilizzata per migliorare le prestazioni delle query, consentendo di accedere rapidamente ai dati in una tabella.',
+            'Un "indice" è una struttura di dati utilizzata per migliorare le prestazioni delle query.',
             'Un "indice" è una funzione matematica utilizzata per il calcolo dei dati.',
             'Un "indice" è una raccolta di dati non strutturati.',
             'Un "indice" è un tipo di strumento di disegno grafico.',

@@ -22,7 +22,7 @@ export default {
         },
         {
           question: "Qual è l'estensione di file utilizzata per i file SCSS?",
-          answer: 1,
+          answer: 0,
           options: [".scss", ".css", ".sass", ".js"],
           selected: null,
         },
@@ -91,7 +91,7 @@ export default {
         },
         {
           question: "Qual è il meccanismo di ereditarietà noto come in SCSS?",
-          answer: 3,
+          answer: 2,
           options: ["Variabili", "Mixins", "Extend", "Inheritance"],
           selected: null,
         },

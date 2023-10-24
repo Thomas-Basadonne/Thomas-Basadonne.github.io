@@ -40,7 +40,7 @@ export default {
             'Un "componente" è un tipo di diagramma utilizzato per la visualizzazione dei dati.',
             'Un "componente" è un tipo di linguaggio di programmazione.',
             'Un "componente" è uno strumento per la progettazione di siti web.',
-            'Un "componente" è una parte riutilizzabile di un\'interfaccia utente, spesso rappresentata come una funzione o classe JavaScript.',
+            'Un "componente" è una parte riutilizzabile di un\'interfaccia utente.',
           ],
           selected: null,
         },
@@ -93,7 +93,7 @@ export default {
           question: 'Cosa fa il concetto di "event handling" in React?',
           answer: 0,
           options: [
-            "Il concetto di \"event handling\" rappresenta la gestione delle interazioni dell'utente con un'applicazione, come il clic su un pulsante o l'invio di un modulo.",
+            "Il concetto di \"event handling\" rappresenta la gestione delle interazioni dell'utente con un'applicazione.",
             'Il concetto di "event handling" rappresenta un tipo di linguaggio di programmazione.',
             'Il concetto di "event handling" rappresenta un sistema operativo.',
             'Il concetto di "event handling" rappresenta un tipo di strumento per la progettazione di siti web.',

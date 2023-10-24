@@ -70,7 +70,7 @@ export default {
           question: "Cosa rappresenta il termine 'XSS' in PHP?",
           answer: 0,
           options: [
-            "XSS è una vulnerabilità di sicurezza che consente a un attaccante di iniettare script malevoli in pagine web",
+            "XSS è una vulnerabilità di sicurezza che consente di iniettare script malevoli",
             "XSS è un linguaggio di scripting utilizzato per creare siti web dinamici.",
             "XSS è una libreria per la gestione delle sessioni in PHP.",
             "XSS è un framework PHP per lo sviluppo di applicazioni web.",
@@ -82,7 +82,7 @@ export default {
           answer: 1,
           options: [
             "Composer è un'ambiente di sviluppo integrato (IDE) per PHP.",
-            "Composer è uno strumento di gestione delle dipendenze utilizzato per le librerie e i pacchetti in progetti PHP.",
+            "Composer è uno strumento di gestione delle dipendenze in progetti PHP.",
             "Composer è un sistema di gestione dei database in PHP.",
             "Composer è un'editor di codice open source.",
           ],

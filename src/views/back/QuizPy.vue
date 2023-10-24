@@ -60,7 +60,7 @@ export default {
           question: 'Cosa rappresenta il termine "PEP 8" in Python?',
           answer: 0,
           options: [
-            'Il termine "PEP 8" rappresenta le linee guida per la formattazione del codice Python, volte a migliorare la leggibilità.',
+            'Il termine "PEP 8" rappresenta le linee guida per la formattazione del codice Python.',
             'Il termine "PEP 8" rappresenta un framework per lo sviluppo di applicazioni web.',
             'Il termine "PEP 8" rappresenta un sistema operativo.',
             'Il termine "PEP 8" rappresenta un tipo di linguaggio di programmazione.',
@@ -73,7 +73,7 @@ export default {
           options: [
             'Il modulo "NumPy" è utilizzato per la progettazione di siti web.',
             'Il modulo "NumPy" è utilizzato per la gestione delle interfacce utente.',
-            'Il modulo "NumPy" è una libreria utilizzata per eseguire calcoli numerici e operazioni su array multidimensionali.',
+            'Il modulo "NumPy" è una libreria utilizzata per eseguire calcoli numerici e operazioni su array.',
             'Il modulo "NumPy" è un tipo di strumento di disegno grafico.',
           ],
           selected: null,
@@ -85,7 +85,7 @@ export default {
             'Il termine "Pythonic" rappresenta una struttura di controllo in un programma.',
             'Il termine "Pythonic" rappresenta un tipo di grafico utilizzato per visualizzare dati.',
             'Il termine "Pythonic" rappresenta un meccanismo per la gestione delle transazioni.',
-            "Il termine \"Pythonic\" rappresenta un concetto che enfatizza l'eleganza del codice Python, la chiarezza e l'aderenza alle linee guida di Python.",
+            'Il termine "Pythonic" rappresenta un concetto che enfatizza l\'eleganza del codice Python.',
           ],
           selected: null,
         },
@@ -118,7 +118,7 @@ export default {
           answer: 1,
           options: [
             'Il termine "Django" rappresenta un framework per lo sviluppo di applicazioni web.',
-            'Il termine "Django" rappresenta un framework per applicazioni web che offre un set completo di strumenti per la creazione di applicazioni web.',
+            'Il termine "Django" rappresenta un framework per applicazioni web.',
             'Il termine "Django" rappresenta un tipo di linguaggio di programmazione.',
             'Il termine "Django" rappresenta un sistema operativo.',
           ],

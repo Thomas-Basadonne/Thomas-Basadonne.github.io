@@ -83,7 +83,7 @@ export default {
           question: 'Cosa rappresenta il termine "indice" in MongoDB?',
           answer: 1,
           options: [
-            'Un "indice" è una struttura di dati utilizzata per migliorare le prestazioni delle query, consentendo di accedere rapidamente ai dati in una raccolta.',
+            'Un "indice" è una struttura di dati utilizzata per migliorare le prestazioni delle query.',
             'Un "indice" è una funzione matematica utilizzata per il calcolo dei dati.',
             'Un "indice" è una raccolta di dati non strutturati.',
             'Un "indice" è un tipo di strumento di disegno grafico.',

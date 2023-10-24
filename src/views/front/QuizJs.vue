@@ -95,7 +95,7 @@ export default {
         },
         {
           question: 'Cosa rappresenta il termine "promise" in JavaScript?',
-          answer: 1,
+          answer: 0,
           options: [
             "Un'oggetto che rappresenta un valore futuro che può essere disponibile subito, in un momento successivo o mai.",
             "Un impegno di completare una determinata azione.",
