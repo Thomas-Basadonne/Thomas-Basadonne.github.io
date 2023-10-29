@@ -1,7 +1,3 @@
-<script setup>
-const { title } = defineProps(["title"]);
-</script>
-
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -33,6 +29,71 @@ const { title } = defineProps(["title"]);
               <li>
                 <router-link to="/quiz-scss" class="dropdown-item"
                   >Vai al quiz SCSS</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-js" class="dropdown-item"
+                  >Vai al quiz JavaScript</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-php" class="dropdown-item"
+                  >Vai al quiz PHP</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-java" class="dropdown-item"
+                  >Vai al quiz Java</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-py" class="dropdown-item"
+                  >Vai al quiz Phyton</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-ruby" class="dropdown-item"
+                  >Vai al quiz Ruby</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-sql" class="dropdown-item"
+                  >Vai al quiz SQL</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-mysql" class="dropdown-item"
+                  >Vai al quiz MySQL</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-mongodb" class="dropdown-item"
+                  >Vai al quiz MongoDB</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-redis" class="dropdown-item"
+                  >Vai al quiz Redis</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-laravel" class="dropdown-item"
+                  >Vai al quiz Laravel</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-react" class="dropdown-item"
+                  >Vai al quiz React</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-vue" class="dropdown-item"
+                  >Vai al quiz Vue.js</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/quiz-spring" class="dropdown-item"
+                  >Vai al quiz Spring</router-link
                 >
               </li>
             </ul>
