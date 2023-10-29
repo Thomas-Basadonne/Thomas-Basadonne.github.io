@@ -13,12 +13,12 @@ export default {
       htmlQuestions: [
         {
           question: "Cos'è HTML?",
-          answer: 0,
+          answer: 3,
           options: [
-            "Hyper Text Markup Language",
             "Highly Textual Markup Language",
             "Hyperlink and Text Markup Language",
             "Hyperlink Transfer Markup Language",
+            "Hyper Text Markup Language",
           ],
           selected: null,
         },
@@ -30,10 +30,10 @@ export default {
         },
         {
           question: "Cosa rappresenta il tag <p>?",
-          answer: 0,
+          answer: 1,
           options: [
-            "Un paragrafo",
             "Un titolo",
+            "Un paragrafo",
             "Un elenco non ordinato",
             "Un'elenco ordinato",
           ],
@@ -48,8 +48,8 @@ export default {
         },
         {
           question: "Qual è il tag per creare una lista non ordinata?",
-          answer: 0,
-          options: ["<ul>", "<ol>", "<li>", "<dl>"],
+          answer: 2,
+          options: ["<ol>", "<li>", "<ul>", "<dl>"],
           selected: null,
         },
         {
@@ -68,8 +68,8 @@ export default {
         },
         {
           question: "Qual è il tag HTML per l'immagine?",
-          answer: 0,
-          options: ["<img>", "<image>", "<picture>", "<photo>"],
+          answer: 2,
+          options: ["<image>", "<picture>", "<img>", "<photo>"],
           selected: null,
         },
         {

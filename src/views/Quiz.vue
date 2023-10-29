@@ -100,7 +100,7 @@ const NextQuestion = () => {
       <hr />
       <div class="info-list text-start">
         <div class="info">
-          1. Avrai solo <span>15 secondi</span> per ogni domanda.
+          1. Avrai solo <span>20 secondi</span> per ogni domanda.
         </div>
         <div class="info">
           2. Una volta selezionata una risposta non puoi cambiarla.

@@ -111,6 +111,18 @@ export default {
           ],
           selected: null,
         },
+        {
+          question:
+            "Quali delle seguenti istruzioni viene utilizzata per leggere il contenuto di un file e restituirlo come stringa?",
+          answer: 1,
+          options: [
+            "write_file()",
+            "file_get_contents()",
+            "readfile()",
+            "load_file()",
+          ],
+          selected: null,
+        },
       ],
     };
   },
